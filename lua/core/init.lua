@@ -23,6 +23,7 @@ opt.clipboard = "unnamedplus"
 opt.cursorline = true
 opt.scrolloff = 7      -- Курсор не переходит ниже 7 символов
 opt.colorcolumn = '80' -- Вертикальная линия до 80 символов
+opt.swapfile = false
 
 -- Indenting
 opt.expandtab = true
