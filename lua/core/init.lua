@@ -42,7 +42,7 @@ opt.mouse = "a"
 opt.number = true
 opt.numberwidth = 2
 opt.ruler = false
--- opt.relativenumber = true -- Относительная нумерация строк
+opt.relativenumber = true -- Относительная нумерация строк
 
 -- don't auto commenting new lines
 cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]

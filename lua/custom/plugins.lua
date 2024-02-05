@@ -1,7 +1,7 @@
 local plugins = {
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python"},
+    ft = {"python", "sql"},
     opts = function()
         return require "custom.configs.null-ls"
     end,
@@ -14,6 +14,7 @@ local plugins = {
         "pyright",
         "mypy",
         "ruff",
+        "sqls",
       },
     },
   },

@@ -4,23 +4,23 @@ local options = {
     exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
   },
   disable_netrw = true,
-  hijack_netrw = true,
+  hijack_netrw = false,
   hijack_cursor = true,
-  hijack_unnamed_buffer_when_opening = false,
+  hijack_unnamed_buffer_when_opening = true,
   sync_root_with_cwd = true,
   update_focused_file = {
     enable = true,
-    update_root = false,
+    update_root = true,
   },
   view = {
-    adaptive_size = false,
+    adaptive_size = true,
     side = "left",
     width = 30,
     preserve_window_proportions = true,
   },
   git = {
     enable = true,
-    ignore = false,
+    ignore = true,
   },
   filesystem_watchers = {
     enable = true,
@@ -31,12 +31,12 @@ local options = {
     },
   },
   renderer = {
-    root_folder_label = false,
-    highlight_git = false,
+    root_folder_label = true,
+    highlight_git = true,
     highlight_opened_files = "none",
 
     indent_markers = {
-      enable = false,
+      enable = true,
     },
 
     icons = {
@@ -74,4 +74,8 @@ local options = {
   },
 }
 
+vim.cmd("hi link NvimTreeExecFile Normal")
+
 return options
+
+
