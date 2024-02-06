@@ -74,7 +74,7 @@ local options = {
   },
 }
 
-vim.cmd("hi link NvimTreeExecFile Normal")
+vim.cmd("hi link NvimTreeExecFile Title")
 
 return options
 
