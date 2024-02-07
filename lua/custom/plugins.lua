@@ -12,7 +12,9 @@ local plugins = {
       ensure_installed = {
         "black",
         "pyright",
-        "mypy",
+        "pylint",
+        -- "mypy",
+        "isort",
         "ruff",
         "sqls",
       },
