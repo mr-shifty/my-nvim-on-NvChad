@@ -1,3 +1,4 @@
+
 **Мои настройки nvim на основе NvChad**
 
 *Установка:*
@@ -13,7 +14,9 @@
 
 Установить [NvChad](https://nvchad.com/docs/quickstart/install)
 
-Склонировать конфигурацию
+Склонировать конфигурацию.
+
+**Весь конфиг должен находиться в папке custom. При клонировании папка создается автоматически.**
 
 ```bash
 git clone https://github.com/mr-shifty/my-nvim-on-NvChad.git ~/.config/nvim/lua/custom --depth 1
@@ -24,3 +27,4 @@ git clone https://github.com/mr-shifty/my-nvim-on-NvChad.git ~/.config/nvim/lua/
 `:MasonInstallAll `
 
 Наслаждаться кайфовым конфигом)
+
