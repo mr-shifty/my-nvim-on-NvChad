@@ -30,5 +30,9 @@ git clone https://github.com/mr-shifty/my-nvim-on-NvChad.git ~/.config/nvim/lua/
 
 `NvChadUpdate`
 
+Перезагрузить nvim, подождать синхронизацию
+
+`MasonInstallAll`
+
 Наслаждаться кайфовым конфигом)
 
