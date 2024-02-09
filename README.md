@@ -16,7 +16,7 @@
 Склонировать конфигурацию
 
 ```bash
-https://github.com/mr-shifty/my-nvim-on-NvChad/lua.git ~/.config/nvim --depth 1
+git clone https://github.com/mr-shifty/my-nvim-on-NvChad.git ~/.config/nvim/lua/custom --depth 1
 ```
 
 Запустить nvim и выполнить команду для загрузки плагинов, если загрузка автоматически не началась.  
