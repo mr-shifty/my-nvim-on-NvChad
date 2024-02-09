@@ -1,7 +1,7 @@
 local plugins = {
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python", "sql"},
+    ft = { "python" },
     opts = function()
         return require "custom.configs.null-ls"
     end,
@@ -16,7 +16,7 @@ local plugins = {
         -- "mypy",
         "isort",
         "ruff",
-        "sqls",
+        -- "sqls",
         "flake8"
       },
     },

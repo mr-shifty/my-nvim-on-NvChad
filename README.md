@@ -15,7 +15,7 @@
 Установить [NvChad](https://nvchad.com/docs/quickstart/install)
 
 ```bash
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 ```
 
 Склонировать конфигурацию.
@@ -32,7 +32,10 @@ git clone https://github.com/mr-shifty/my-nvim-on-NvChad.git ~/.config/nvim/lua/
 
 Перезагрузить nvim, подождать синхронизацию
 
+`MasonInstall lua-language-server`
+
 `MasonInstallAll`
+
 
 Наслаждаться кайфовым конфигом)
 

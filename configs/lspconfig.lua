@@ -13,8 +13,8 @@ lspconfig.pyright.setup({
 
 -- lspconfig.sqls.setup{}
 
-lspconfig.sqls.setup{
-    on_attach = function(client, bufnr)
-        require('sqls').on_attach(client, bufnr)
-    end
-}
+-- lspconfig.sqls.setup{
+--     on_attach = function(client, bufnr)
+--         require('sqls').on_attach(client, bufnr)
+--     end
+-- }
