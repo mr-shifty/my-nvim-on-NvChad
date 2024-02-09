@@ -1,4 +1,15 @@
+local overrides = require("custom.configs.overrides")
+
 local plugins = {
+
+  -- Override plugin definition options
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require "plugins.configs.lspconfig"
+      require "custom.configs.lspconfig"
+    end,
+  },
   {
     "jose-elias-alvarez/null-ls.nvim",
     ft = { "python" },
@@ -6,46 +17,19 @@ local plugins = {
         return require "custom.configs.null-ls"
     end,
   },
+
+  -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "black",
-        "pyright",
-        "pylint",
-        "isort",
-        "ruff",
-        "flake8"
-        -- "sqls",
-        -- "mypy",
-      },
-    },
+    opts = overrides.mason
   },
   {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
-    end,
-    },
-  {
     "nvim-tree/nvim-tree.lua",
-    opts = function()
-      require "custom.configs.nvimtree"
-    end,
+    opts = overrides.nvimtree,
   },
   {
     "hrsh7th/nvim-cmp",
-    opts = function()
-    local cmp = require "cmp"
-
-    cmp.setup {
-        completion = {
-          autocomplete = false
-        },
-      }
-    end
+    opts = overrides.cmp,
   }
 }
 return plugins

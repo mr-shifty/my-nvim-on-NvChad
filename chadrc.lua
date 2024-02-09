@@ -2,6 +2,7 @@
 
 local M = {}
 
+
 M.ui = {
   theme = "catppuccin",
   theme_toggle = { "catppuccin", "penumbra_light" },
@@ -11,9 +12,9 @@ M.ui = {
     -- round and block will work for minimal theme only
     separator_style = "default",
     overriden_modules = nil,
-    },
-
+  },
 }
+
 M.plugins = "custom.plugins"
 
 return M
