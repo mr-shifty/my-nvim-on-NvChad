@@ -14,6 +14,10 @@
 
 Установить [NvChad](https://nvchad.com/docs/quickstart/install)
 
+```bash
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+```
+
 Склонировать конфигурацию.
 
 **Весь конфиг должен находиться в папке custom. При клонировании папка создается автоматически.**
