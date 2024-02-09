@@ -10,14 +10,15 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "lua-language-server",
         "black",
         "pyright",
         "pylint",
-        -- "mypy",
         "isort",
         "ruff",
-        -- "sqls",
         "flake8"
+        -- "sqls",
+        -- "mypy",
       },
     },
   },
