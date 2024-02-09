@@ -3,10 +3,11 @@
 *Установка:*
 
 Установить [NvChad](https://nvchad.com/docs/quickstart/install)
+
 Рекомендуется выполнить команды, чтобы очистить старые конфигурации:
 
 ```bash
- rm -rf ~/.config/nvim #или заархивировать
+ rm -rf ~/.config/nvim # или заархивировать, если есть конфигурация
 ``` 
 ```bash
  rm -rf ~/.local/share/nvim
