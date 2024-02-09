@@ -1,9 +1,17 @@
-# my-nvim-on-NvChad
 **Мои настройки nvim на основе NvChad**
 
 *Установка:*
 
-1. Установить [NvChad](https://nvchad.com/docs/quickstart/install)
-2. Заменить папку custom
-3. Запустить nvim и выполнить команду для загрузки плагинов  `:MasonInstallAll `
-4. Наслаждаться кайфовым конфигом)
+Установить [NvChad](https://nvchad.com/docs/quickstart/install)
+Рекомендуется выполнить команды, чтобы очистить старые конфигурации:
+
+ `rm -rf ~/.config/nvim` *****или заархивировать.*****
+ `rm -rf ~/.local/share/nvim`
+ 
+Добавить папку custom в `nvim/lua/`
+
+Запустить nvim и выполнить команду для загрузки плагинов, если загрузка автоматически не началась.  
+
+`:MasonInstallAll `
+
+Наслаждаться кайфовым конфигом)
