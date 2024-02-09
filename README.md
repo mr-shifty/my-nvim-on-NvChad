@@ -5,10 +5,12 @@
 Установить [NvChad](https://nvchad.com/docs/quickstart/install)
 Рекомендуется выполнить команды, чтобы очистить старые конфигурации:
 
- `rm -rf ~/.config/nvim` *****или заархивировать.*****
- 
- `rm -rf ~/.local/share/nvim`
-
+```bash
+ rm -rf ~/.config/nvim #или заархивировать
+``` 
+```bash
+ rm -rf ~/.local/share/nvim
+```
  
 Добавить папку custom в `nvim/lua/`
 
