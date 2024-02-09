@@ -2,18 +2,22 @@
 
 *Установка:*
 
-Установить [NvChad](https://nvchad.com/docs/quickstart/install)
-
 Рекомендуется выполнить команды, чтобы очистить старые конфигурации:
 
 ```bash
- rm -rf ~/.config/nvim # или заархивировать, если есть конфигурация
-``` 
+ rm -rf ~/.config/nvim # или заархивировать
+ ``` 
+ ```bash
+  rm -rf ~/.local/share/nvim
+  ```
+
+Установить [NvChad](https://nvchad.com/docs/quickstart/install)
+
+Склонировать конфигурацию
+
 ```bash
- rm -rf ~/.local/share/nvim
+https://github.com/mr-shifty/my-nvim-on-NvChad/lua.git ~/.config/nvim
 ```
- 
-Добавить папку custom в `nvim/lua/`
 
 Запустить nvim и выполнить команду для загрузки плагинов, если загрузка автоматически не началась.  
 
