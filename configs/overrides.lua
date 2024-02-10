@@ -3,20 +3,23 @@ local M = {}
 
 M.mason = {
   ensure_installed = {
+
     -- lua stuff
+    ------------------
     "lua-language-server",
 
     -- python stuff
+    ------------------
     "pyright",
     "black",
     "isort",
     "ruff",
-    "pylint",
-    "flake8"
+    -- "flake8",
+    -- "mypy",
 
     --other stuff
+    -------------------
     -- "sqls",
-    -- "mypy",
 
   },
 }

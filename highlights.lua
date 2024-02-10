@@ -5,6 +5,9 @@ M.override = {
   Comment = {
     italic = true,
   },
+  Constant = {
+    fg = "green"
+  }
 }
 
 ---@type HLTable
