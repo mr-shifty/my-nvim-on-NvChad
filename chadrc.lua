@@ -1,5 +1,6 @@
 ---@type ChadrcConfig
 
+local highlights = require "custom.highlights"
 local M = {}
 
 
@@ -13,10 +14,14 @@ M.ui = {
     separator_style = "default",
     overriden_modules = nil,
   },
+
+  -- Переопределение цветов
+  hl_override = highlights.override,
+  hl_add = highlights.add,
+
 }
 
 M.plugins = "custom.plugins"
 
 return M
-
 

@@ -44,4 +44,4 @@ augroup end
 cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
 
 -- Highlights
-vim.cmd("hi link NvimTreeExecFile Title")
+-- vim.cmd("hi link NvimTreeExecFile Title") -- Переопределение выделения исполняемых файлов
