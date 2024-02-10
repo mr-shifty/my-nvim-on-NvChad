@@ -41,7 +41,8 @@ M.nvimtree = {
   },
 
   git = {
-    enable = true
+    enable = true,
+    ignore = false,
   }
 }
 
