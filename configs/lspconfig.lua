@@ -1,7 +1,9 @@
 local config = require("plugins.configs.lspconfig")
 
 local on_attach = config.on_attach
-local capabilities = config.capabilities
+-- local capabilities = config.capabilities
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
 
 local lspconfig = require("lspconfig")
 
