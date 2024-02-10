@@ -24,6 +24,10 @@ M.mason = {
   },
 }
 
+M.treesitter = {
+  ensure_installed = { "lua", 'python', },
+}
+
 M.nvimtree = {
 
   renderer = {
