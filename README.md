@@ -26,8 +26,4 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 git clone https://github.com/mr-shifty/my-nvim-on-NvChad.git ~/.config/nvim/lua/custom --depth 1
 ```
 
-Запустить nvim и выполнить команду для обновления и загрузки плагинов.  
-
-`NvChadUpdate`
-
 Наслаждаться кайфовым конфигом)
