@@ -4,10 +4,11 @@ local M = {}
 M.override = {
   Comment = {
     italic = true,
+    fg = '#9DC2B9'
   },
   Constant = {
     fg = "green"
-  }
+  },
 }
 
 ---@type HLTable

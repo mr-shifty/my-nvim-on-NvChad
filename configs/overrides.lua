@@ -19,13 +19,13 @@ M.mason = {
 
     --other stuff
     -------------------
-    -- "sqls",
+    "sqls",
 
   },
 }
 
 M.treesitter = {
-  ensure_installed = { "lua", 'python', },
+  ensure_installed = { "lua", 'python', "sql" },
 }
 
 M.nvimtree = {

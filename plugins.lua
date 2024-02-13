@@ -34,6 +34,6 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
-  }
+  },
 }
 return plugins
