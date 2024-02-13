@@ -25,7 +25,7 @@ M.mason = {
 }
 
 M.treesitter = {
-  ensure_installed = { "lua", 'python', "sql" },
+  ensure_installed = { "lua", 'python', "sql", 'make', },
 }
 
 M.nvimtree = {
