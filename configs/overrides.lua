@@ -17,6 +17,8 @@ M.mason = {
     -- "flake8",
     -- "mypy",
 
+    "debugpy",
+
     --other stuff
     -------------------
     "sqls",
