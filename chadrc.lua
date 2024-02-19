@@ -7,7 +7,7 @@ local M = {}
 M.ui = {
   theme = "catppuccin",
   theme_toggle = { "catppuccin", "penumbra_light" },
-  transparency = true,
+  -- transparency = true,
   statusline = {
     theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
