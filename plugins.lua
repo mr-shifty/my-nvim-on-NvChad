@@ -22,8 +22,14 @@ local plugins = {
   {
     "mfussenegger/nvim-dap",
     config = function(_, opts)
+      vim.fn.sign_define(
+        'DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''}
+      )
+      vim.fn.sign_define(
+        'DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''}
+      )
       require("core.utils").load_mappings("dap")
-    end
+    end,
   },
   {
     "rcarriga/nvim-dap-ui",

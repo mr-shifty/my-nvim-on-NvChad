@@ -24,8 +24,28 @@ M.replace = {
 M.dap = {
   plugin = true,
   n = {
-    ["<leader>db"] = {"<cmd> DapToggleBreakpoint <CR>"}
-  }
+    ["<F5>"] = {"<cmd> DapContinue <CR>"},
+    ["<F17>"] = {
+      function()
+        require("dap").restart()
+      end
+    }, -- Shift+F5
+    ["<F29>"] = {"<cmd> DapTerminate <CR>"}, -- Ctrl+F5
+    ["<F9>"] = {"<cmd> DapToggleBreakpoint <CR>"},
+    ["<F21>"] = {
+      function()
+        require("dap").clear_breakpoints()
+      end
+    }, -- Shift+F9
+    ["<F10>"] = {"<cmd> DapStepOver <CR>"},
+    ["<F22>"] = {
+      function()
+        require("dap").goto_()
+      end -- Shift+F10
+    },
+    ["<F11>"] = {"<cmd> DapStepInto <CR>"},
+    ["<F12>"] = {"<cmd> DapStepOut <CR>"},
+  },
 }
 
 M.dap_python = {
@@ -33,7 +53,7 @@ M.dap_python = {
   n = {
     ["<leader>dpr"] = {
       function()
-        require('dap').continue() -- работа с тестами - ('dap-python').test_method() 
+        require('dap-python').test_method() -- работа с тестами 
       end
     }
   }
