@@ -2,7 +2,7 @@ local M = {}
 
 ---@type Base46HLGroupsList
 M.override = {
-  Comment = {
+  ["@comment"] = {
     italic = true,
     fg = '#9DC2B9'
   },

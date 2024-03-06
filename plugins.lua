@@ -23,7 +23,7 @@ local plugins = {
     "mfussenegger/nvim-dap",
     config = function(_, opts)
       vim.fn.sign_define(
-        'DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''}
+        'DapBreakpoint', {text='🐞', texthl='', linehl='', numhl=''}
       )
       vim.fn.sign_define(
         'DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''}
