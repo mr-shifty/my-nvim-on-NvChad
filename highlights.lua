@@ -6,9 +6,6 @@ M.override = {
     italic = true,
     fg = '#9DC2B9'
   },
-  Constant = {
-    fg = "green"
-  },
 }
 
 ---@type HLTable
@@ -16,6 +13,12 @@ M.add = {
   NvimTreeExecFile = {
     -- link = 'Normal',
     italic = true,
+  },
+  NvimTreeGitStagedIcon = {
+    fg = "green"
+  },
+  NvimTreeGitMergeIcon = {
+    fg = "#9C02A7",
   },
 }
 
