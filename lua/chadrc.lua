@@ -1,12 +1,14 @@
+-- This file needs to have same structure as nvconfig.lua
+-- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
+
 ---@type ChadrcConfig
-
-local highlights = require "custom.highlights"
 local M = {}
-
+local highlights = require "highlights"
 
 M.ui = {
-  theme = "catppuccin",
-  theme_toggle = { "catppuccin", "penumbra_light" },
+  theme = "ashes",
+
+  theme_toggle = { "ashes", "penumbra_light" },
   transparency = true,
   statusline = {
     theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
@@ -15,16 +17,15 @@ M.ui = {
     separator_style = "default",
     overriden_modules = nil,
   },
+  -- hl_override = {
+  -- 	Comment = { italic = true },
+  -- 	["@comment"] = { italic = true },
+  -- },
 
   -- Переопределение цветов
+
   hl_override = highlights.override,
   hl_add = highlights.add,
-
 }
 
-M.plugins = "custom.plugins"
-M.mappings = require "custom.mappings"
-
-
 return M
-

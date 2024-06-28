@@ -1,26 +1,25 @@
+require "nvchad.mappings"
+
+-- add yours here
+
+local map = vim.keymap.set
 local M = {}
 
+map("n", ";", ":", { desc = "CMD enter command mode" })
+map("i", "jk", "<ESC>")
+
+-- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
 M.replace = {
-  -- Переименование переменных gr и gR
 
-  -- For local replace (Пока не работает для python!)
-
-  -- vim.api.nvim_set_keymap('n', 'gr', 'gd[{V%::s/<C-R>///gc<left><left><left>',
-  -- { noremap = true }),
-
-  -- For global replace
-
-  --Замена любого текста
-  vim.api.nvim_set_keymap('n', 'gR', '*:%s/<C-R>///gc<left><left><left>',
+  map('n', 'gR', '*:%s/<C-R>///gc<left><left><left>',
   { noremap = true }),
 
   -- Зависит от определения переменной
-  vim.api.nvim_set_keymap('n', 'gr', 'gD:%s/<C-R>///gc<left><left><left>',
+  map('n', 'gr', 'gD:%s/<C-R>///gc<left><left><left>',
   { noremap = true }),
 }
-
 -- Маппинг дебагера
-
 M.dap = {
   plugin = true,
   n = {

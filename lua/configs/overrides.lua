@@ -21,7 +21,7 @@ M.mason = {
 
     --other stuff
     -------------------
-    "sqls",
+    -- "sqls",
 
   },
 }
@@ -63,4 +63,3 @@ M.cmp = {
 }
 
 return M
-

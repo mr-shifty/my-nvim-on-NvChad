@@ -1,47 +1,39 @@
-local cmd = vim.cmd
-local exec = vim.api.nvim_exec
-local opt = vim.opt
-local g = vim.g
+vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
+vim.g.mapleader = " "
 
--------------------------------------- globals --------------------------------
+-- bootstrap lazy and all plugins
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
--- Направление перевода с русского на английский
+if not vim.loop.fs_stat(lazypath) then
+  local repo = "https://github.com/folke/lazy.nvim.git"
+  vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
+end
 
-g.translate_source = 'ru'
-g.translate_target = 'en'
+vim.opt.rtp:prepend(lazypath)
 
+local lazy_config = require "configs.lazy"
 
--------------------------------------- options ------------------------------------------
+-- load plugins
+require("lazy").setup({
+  {
+    "NvChad/NvChad",
+    lazy = false,
+    branch = "v2.5",
+    import = "nvchad.plugins",
+    config = function()
+      require "options"
+    end,
+  },
 
-opt.relativenumber = true -- Относительная нумерация строк
-opt.colorcolumn = '80' -- Вертикальная линия до 80 символов
-opt.spelllang = { 'en_us', 'ru' } -- Словари рус eng
-opt.scrolloff = 7      -- Курсор не переходит ниже 7 символов
-opt.colorcolumn = '80' -- Вертикальная линия до 80 символов
-opt.swapfile = false -- не создавать swap-файлы
-opt.autoindent = true
+  { import = "plugins" },
+}, lazy_config)
 
+-- load theme
+dofile(vim.g.base46_cache .. "defaults")
+dofile(vim.g.base46_cache .. "statusline")
 
-------------------------------------------------------------------------------
--- Полезные фишки
-------------------------------------------------------------------------------
+require "nvchad.autocmds"
 
-
--- Запоминает где nvim последний раз редактировал файл
-cmd [[
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-]]
-
--- Подсвечивает на доли секунды скопированную часть текста
-exec([[
-augroup YankHighlight
-autocmd!
-autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
-augroup end
-]], false)
-
--- don't auto commenting new lines
-cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
-
--- Highlights
--- vim.cmd("hi link NvimTreeExecFile Title") -- Переопределение выделения исполняемых файлов
+vim.schedule(function()
+  require "mappings"
+end)
