@@ -73,6 +73,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
   },
+  {
 
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
@@ -80,7 +81,9 @@ return {
   {
     "hrsh7th/nvim-cmp",
     opts = overrides.cmp,
-  }
+  },
+}
+
   --
   -- {
   -- 	"williamboman/mason.nvim",
