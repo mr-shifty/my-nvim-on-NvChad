@@ -31,4 +31,3 @@ git clone https://github.com/mr-shifty/my-nvim-on-NvChad.git ~/.config/nvim/lua/
 `NvChadUpdate`
 
 Наслаждаться кайфовым конфигом)
-
