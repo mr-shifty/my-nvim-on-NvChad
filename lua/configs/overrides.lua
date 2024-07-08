@@ -1,6 +1,5 @@
 local M = {}
 
-
 M.mason = {
   ensure_installed = {
 
@@ -22,12 +21,11 @@ M.mason = {
     --other stuff
     -------------------
     -- "sqls",
-
   },
 }
 
 M.treesitter = {
-  ensure_installed = { "lua", 'python', "sql", 'make', },
+  ensure_installed = { "lua", "python", "sql", "make" },
 }
 
 M.nvimtree = {
@@ -45,8 +43,8 @@ M.nvimtree = {
     icons = {
       show = {
         git = true,
-      }
-    }
+      },
+    },
   },
 
   view = {
@@ -56,13 +54,13 @@ M.nvimtree = {
   git = {
     enable = true,
     ignore = false,
-  }
+  },
 }
 
 M.cmp = {
 
   completion = {
-    autocomplete = false
+    autocomplete = false,
   },
 }
 
