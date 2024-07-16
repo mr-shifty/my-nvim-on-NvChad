@@ -1,30 +1,32 @@
+local mappings = require "mappings"
+local M = {}
 
+M.dap = function()
+  vim.fn.sign_define("DapBreakpoint", { text = "🐞", texthl = "", linehl = "", numhl = "" })
+  -- vim.fn.sign_define("DapBreakpoint", { text = "B", texthl = "", linehl = "", numhl = "" })
+  vim.fn.sign_define("DapStopped", { text = "▶️", texthl = "", linehl = "", numhl = "" })
+  mappings.dap()
+end
 
-{
-  "mfussenegger/nvim-dap",
-  config = function()
-    -- require "configs.debugger"
-    -- vim.fn.sign_define("DapBreakpoint", { text = "🐞", texthl = "", linehl = "", numhl = "" })
-    -- vim.fn.sign_define("DapStopped", { text = "▶️", texthl = "", linehl = "", numhl = "" })
-    -- require("core.utils").load_mappings "dap"
+M.dapui = function()
+  local dap = require "dap"
+  local dapui = require "dapui"
+  dapui.setup()
+  dap.listeners.after.event_initialized["dapui_config"] = function()
+    dapui.open()
+  end
+  dap.listeners.before.event_terminated["dapui_config"] = function()
+    dapui.close()
+  end
+  dap.listeners.before.event_exited["dapui_config"] = function()
+    dapui.close()
+  end
+end
 
-    -- Настройка dap
-    local dap = require "dap"
-    dap.adapters.python = {
-      type = "executable",
-      command = "python",
-      args = { "-m", "debugpy.adapter" },
-    }
-    dap.configurations.python = {
-      {
-        type = "python",
-        request = "launch",
-        name = "Launch file",
-        program = "${file}",
-        pythonPath = function()
-          return "/home/pavel/.pyenv/shims/python"
-        end,
-      },
-    }
-  end,
-},
+M.dap_python = function()
+  local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+  require("dap-python").setup(path)
+  mappings.dap_python()
+end
+
+return M

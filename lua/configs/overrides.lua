@@ -25,7 +25,7 @@ M.mason = {
 }
 
 M.treesitter = {
-  ensure_installed = { "lua", "python", "sql", "make" },
+  ensure_installed = { "lua", "python", "sql", "make", "vim", "vimdoc" },
 }
 
 M.nvimtree = {
@@ -35,7 +35,7 @@ M.nvimtree = {
     -- root_folder_label = function(path)
     --   return "" .. vim.fn.fnamemodify(path, ":pwd")
     -- end,
-    root_folder_label = ":~:s?$?/..?",
+    root_folder_label = ":~:s?$?/?",
     highlight_git = "name",
     indent_markers = {
       enable = true,
