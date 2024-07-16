@@ -1,4 +1,5 @@
 local overrides = require "configs.overrides"
+local mappings = require "mappings"
 
 return {
   {
@@ -24,7 +25,7 @@ return {
     config = function()
       vim.fn.sign_define("DapBreakpoint", { text = "B", texthl = "", linehl = "", numhl = "" })
       vim.fn.sign_define("DapStopped", { text = "▶️", texthl = "", linehl = "", numhl = "" })
-      -- require("core.utils").load_mappings "dap"
+      mappings.dap()
     end,
   },
   {
@@ -55,10 +56,7 @@ return {
     config = function()
       local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
       require("dap-python").setup(path)
-      vim.keymap.set("n", "<F5>", function()
-        require("dap").continue()
-      end)
-      -- require("core.utils").load_mappings "dap_python"
+      mappings.dap_python()
     end,
   },
 
