@@ -4,7 +4,7 @@ local M = {}
 M.override = {
   ["@comment"] = {
     italic = true,
-    fg = '#9DC2B9'
+    fg = "#9DC2B9",
   },
 }
 
@@ -15,7 +15,7 @@ M.add = {
     italic = true,
   },
   NvimTreeGitStagedIcon = {
-    fg = "green"
+    fg = "green",
   },
   NvimTreeGitMergeIcon = {
     fg = "#9C02A7",

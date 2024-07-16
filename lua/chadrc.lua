@@ -17,15 +17,16 @@ M.ui = {
     separator_style = "default",
     overriden_modules = nil,
   },
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
 
   -- Переопределение цветов
 
   hl_override = highlights.override,
   hl_add = highlights.add,
+
+  -- hl_override = {
+  -- 	Comment = { italic = true },
+  -- 	["@comment"] = { italic = true },
+  -- },
 }
 
 return M

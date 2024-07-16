@@ -1,6 +1,5 @@
 local overrides = require "configs.overrides"
 local debugger = require "configs.debugger"
--- local mappings = require "mappings"
 
 return {
   {
@@ -11,7 +10,6 @@ return {
     end,
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -61,6 +59,7 @@ return {
   },
 }
 
+-- These are some examples, uncomment them if you want to see them work!
 --
 -- {
 -- 	"williamboman/mason.nvim",
