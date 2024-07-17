@@ -12,14 +12,17 @@ map("i", "jk", "<ESC>")
 
 M.replace = {
 
-  map("n", "gR", "*:%s/<C-R>///gc<left><left><left>", { noremap = true }),
-
-  -- Зависит от определения переменной
+  map(
+    "n",
+    "gR",
+    "*:%s/<C-R>///gc<left><left><left>",
+    { noremap = true, desc = "Замена во всём тексте" }
+  ), -- Зависит от определения переменной
   map(
     "n",
     "gr",
     "gD:%s/<C-R>///gc<left><left><left>",
-    { desc = "Замена во всём тексте", noremap = true }
+    { desc = "Замена с учетом определения", noremap = true }
   ),
 }
 
