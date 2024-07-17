@@ -21,7 +21,7 @@ return {
   -- Debugger
   {
     "mfussenegger/nvim-dap",
-    config = debugger.dap(),
+    config = debugger.dap,
   },
   {
     "rcarriga/nvim-dap-ui",
@@ -35,7 +35,7 @@ return {
       "mfussenegger/nvim-dap",
       "rcarriga/nvim-dap-ui",
     },
-    config = debugger.dap_python(),
+    config = debugger.dap_python,
   },
 
   -- override plugin configs
