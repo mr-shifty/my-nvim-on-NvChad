@@ -19,6 +19,16 @@ return {
   },
 
   -- Debugger
+  -- {
+  --   "jay-babu/mason-nvim-dap.nvim",
+  --   dependencies = {
+  --     "williamboman/mason.nvim",
+  --     "mfussenegger/nvim-dap",
+  --   },
+  --   opts = {
+  --     hendlers = {},
+  --   },
+  -- },
   {
     "mfussenegger/nvim-dap",
     config = debugger.dap,

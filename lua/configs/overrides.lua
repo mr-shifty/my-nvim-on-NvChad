@@ -1,31 +1,7 @@
 local M = {}
 
-M.mason = {
-  ensure_installed = {
-
-    -- lua stuff
-    ------------------
-    "lua-language-server",
-
-    -- python stuff
-    ------------------
-    "pyright",
-    "black",
-    "isort",
-    "ruff",
-    -- "flake8",
-    -- "mypy",
-
-    "debugpy",
-
-    --other stuff
-    -------------------
-    -- "sqls",
-  },
-}
-
 M.treesitter = {
-  ensure_installed = { "lua", "python", "sql", "make", "vim", "vimdoc" },
+  ensure_installed = { "lua", "python", "sql", "make", "vim", "vimdoc", "cpp" },
 }
 
 M.nvimtree = {

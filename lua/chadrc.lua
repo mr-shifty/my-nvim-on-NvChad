@@ -9,7 +9,7 @@ M.ui = {
   theme = "ashes",
 
   theme_toggle = { "ashes", "penumbra_light" },
-  transparency = true,
+  -- transparency = true,
   statusline = {
     theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
@@ -27,6 +27,36 @@ M.ui = {
   -- 	Comment = { italic = true },
   -- 	["@comment"] = { italic = true },
   -- },
+}
+
+M.mason = {
+  pkgs = {
+
+    -- lua
+    ------------------
+    "lua-language-server",
+
+    -- python
+    ------------------
+    "pyright",
+    "black",
+    "isort",
+    "ruff",
+    -- "flake8",
+    -- "mypy",
+
+    "debugpy",
+
+    -- C++
+    -------------------
+    "clangd",
+    "clang-format",
+    "codelldb",
+
+    --other
+    -------------------
+    -- "sqls",
+  },
 }
 
 return M
