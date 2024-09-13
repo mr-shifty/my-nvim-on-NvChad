@@ -21,6 +21,7 @@ return {
   -- Debugger
   -- {
   --   "jay-babu/mason-nvim-dap.nvim",
+  --   event = "VeryLazy",
   --   dependencies = {
   --     "williamboman/mason.nvim",
   --     "mfussenegger/nvim-dap",
@@ -35,6 +36,7 @@ return {
   },
   {
     "rcarriga/nvim-dap-ui",
+    event = "VeryLazy",
     dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
     config = debugger.dapui,
   },
