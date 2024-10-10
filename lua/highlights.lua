@@ -2,6 +2,9 @@ local M = {}
 
 ---@type Base46HLGroupsList
 M.override = {
+  -- example:
+  -- Comment = { italic = true } or ["@comment"] = { italic = true }
+
   ["@comment"] = {
     italic = true,
     fg = "#9DC2B9",

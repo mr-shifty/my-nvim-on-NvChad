@@ -5,11 +5,17 @@
 local M = {}
 local highlights = require "highlights"
 
-M.ui = {
-  theme = "ashes",
+-- Переопределение цветов и тем
 
-  theme_toggle = { "ashes", "penumbra_light" },
+M.base46 = {
+  theme = "catppuccin",
+  theme_toggle = { "catppuccin", "penumbra_light" },
   -- transparency = true,
+  hl_override = highlights.override,
+  hl_add = highlights.add,
+}
+
+M.ui = {
   statusline = {
     theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
@@ -17,16 +23,6 @@ M.ui = {
     separator_style = "default",
     overriden_modules = nil,
   },
-
-  -- Переопределение цветов
-
-  hl_override = highlights.override,
-  hl_add = highlights.add,
-
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
 }
 
 M.mason = {
