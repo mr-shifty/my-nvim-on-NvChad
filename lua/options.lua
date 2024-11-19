@@ -9,19 +9,23 @@ require "nvchad.options"
 local cmd = vim.cmd
 local opt = vim.opt
 
--------------------------------------- options ------------------------------------------
+-------------------------------------- options -------------------------------
 
 opt.relativenumber = true -- Относительная нумерация строк
-opt.colorcolumn = "80" -- Вертикальная линия до 80 символов
+opt.colorcolumn = "120" -- Вертикальная линия до 120 символов
 opt.spelllang = { "en_us", "ru" } -- Словари рус eng
 opt.scrolloff = 7 -- Курсор не переходит ниже 7 символов
-opt.colorcolumn = "80" -- Вертикальная линия до 80 символов
 opt.swapfile = false -- не создавать swap-файлы
 opt.autoindent = true
 
 ------------------------------------------------------------------------------
 -- Полезные фишки
 ------------------------------------------------------------------------------
+
+-- работает с раскладками en-ru во всех режимах
+cmd [[
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+]]
 
 -- Запоминает где nvim последний раз редактировал файл
 cmd [[
@@ -41,6 +45,3 @@ augroup end
 
 -- don't auto commenting new lines
 cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
-
--- Highlights
--- vim.cmd("hi link NvimTreeExecFile Title") -- Переопределение выделения исполняемых файлов
