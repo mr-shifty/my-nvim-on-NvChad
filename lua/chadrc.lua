@@ -45,8 +45,8 @@ M.mason = {
 
     -- C++
     -------------------
-    "clangd",
-    "clang-format",
+    -- "clangd",
+    -- "clang-format",
     -- "codelldb", -- Дебаггер
 
     --other
