@@ -8,8 +8,8 @@ local highlights = require "highlights"
 -- Переопределение цветов и тем
 
 M.base46 = {
-  theme = "catppuccin",
-  theme_toggle = { "catppuccin", "penumbra_light" },
+  theme = "aylin",
+  theme_toggle = { "aylin", "penumbra_light" },
   -- transparency = true,
   hl_override = highlights.override,
   hl_add = highlights.add,

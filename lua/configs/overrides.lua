@@ -33,11 +33,11 @@ M.nvimtree = {
   },
 }
 
-M.cmp = {
-
-  completion = {
-    autocomplete = false,
-  },
-}
+-- M.cmp = {
+--
+--   completion = {
+--     autocomplete = false,
+--   },
+-- }
 
 return M

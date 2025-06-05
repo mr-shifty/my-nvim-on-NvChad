@@ -45,4 +45,5 @@ augroup end
 
 -- don't auto commenting new lines
 cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
-cmd [[set mouse=]]
+
+-- cmd [[set mouse=]]
