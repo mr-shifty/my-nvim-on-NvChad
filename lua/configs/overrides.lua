@@ -1,7 +1,17 @@
 local M = {}
 
 M.treesitter = {
-  ensure_installed = { "lua", "python", "sql", "make", "vim", "vimdoc", "cpp" },
+  ensure_installed = {
+    "lua",
+    "bash",
+    "yaml",
+    "python",
+    "sql",
+    "make",
+    "vim",
+    "vimdoc",
+    "cpp",
+  },
 }
 
 M.nvimtree = {

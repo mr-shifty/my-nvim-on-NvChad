@@ -3,38 +3,30 @@ local on_init = base.on_init
 local on_attach = base.on_attach
 local capabilities = base.capabilities
 
-local lspconfig = require "lspconfig"
--- local servers = { "html", "cssls" }
+-- BASH
+vim.lsp.config("bashls", {
+  capabilities = capabilities,
+  on_init = on_init,
+  on_attach = on_attach,
+  filetypes = { "sh", "bash" },
+})
 
-lspconfig.pyright.setup {
-  -- on_attach = on_attach, -- вылазит бесячее окно с подсказками
+-- PYRIGHT
+vim.lsp.config("pyright", {
   capabilities = capabilities,
   on_init = on_init,
   filetypes = { "python" },
-}
+})
 
-lspconfig.clangd.setup {
-  on_attach = function(client, bufnr)
-    client.server_capabilities.signatureHelpProvider = true
-    on_attach(client, bufnr)
-  end,
+-- YAML
+vim.lsp.config("yaml-language-server", {
   capabilities = capabilities,
-}
+  on_init = on_init,
+  filetypes = { "yaml", "yml" },
+})
 
--- EXAMPLE
+local lsp_servers = { "bashls", "pyright", "yaml-language-server" }
 
--- lsps with default config
--- for _, lsp in ipairs(servers) do
---   lspconfig[lsp].setup {
---     on_attach = on_attach,
---     on_init = on_init,
---     capabilities = capabilities,
---   }
--- end
-
--- -- typescript
--- lspconfig.tsserver.setup {
---   on_attach = on_attach,
---   on_init = on_init,
---   capabilities = capabilities,
--- }
+for _, value in ipairs(lsp_servers) do
+  vim.lsp.enable(value)
+end

@@ -8,8 +8,8 @@ local highlights = require "highlights"
 -- Переопределение цветов и тем
 
 M.base46 = {
-  theme = "aylin",
-  theme_toggle = { "aylin", "penumbra_light" },
+  theme = "catppuccin",
+  theme_toggle = { "catppuccin", "penumbra_light" },
   -- transparency = true,
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -32,26 +32,24 @@ M.mason = {
     ------------------
     "lua-language-server",
 
+    -- bash
+    ----------------
+    "bash-language-server",
+    "shellcheck",
+    "shfmt",
+
+    -- yaml
+    "yaml-language-server",
+    "yamllint",
+
     -- python
     ------------------
     "pyright",
     "black",
     "isort",
     "ruff",
-    -- "flake8",
-    -- "mypy",
 
     "debugpy",
-
-    -- C++
-    -------------------
-    -- "clangd",
-    -- "clang-format",
-    -- "codelldb", -- Дебаггер
-
-    --other
-    -------------------
-    -- "sqls",
   },
 }
 
